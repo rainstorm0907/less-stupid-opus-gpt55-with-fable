@@ -1,0 +1,7 @@
+interface:
+  display_name: "Less Stupid Opus & GPT 5.5"
+  short_description: "Make coding agents flail less"
+  default_prompt: "Use $less-stupid-opus-gpt55-with-fable to route this task lightly, skip ceremony when small, and require evidence when substantial."
+
+policy:
+  allow_implicit_invocation: true
