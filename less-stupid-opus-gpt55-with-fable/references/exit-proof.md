@@ -2,39 +2,39 @@
 
 Use this only for multi-step implementation, debugging, rendered UI/media,
 scripts/CLI, generated artifacts, or product-quality work. Small direct tasks
-skip it.
+can stay lightweight.
 
-The point is simple: stop claiming "done" without looking.
+The point is simple: look at the work before calling it done.
 
 ## The Five Lines
 
 1. Changed files
    - List the real paths touched.
-   - If you cannot list them, you do not know what changed.
+   - Clear paths make the scope reviewable.
 
 2. Observation
    - Include one command, test, runtime result, or reproduced behavior you
      actually saw.
-   - "It should work" is not an observation.
+   - Prefer "I ran/observed X" over "this should work."
 
 3. Visual or artifact evidence
    - Visual change: screenshot, render, or video.
    - Generated file/report/image/PDF: sample output or rendered artifact.
-   - Nothing visual and no artifact: skip this honestly.
+   - When nothing visual or artifact-producing changed, say that plainly.
 
 4. Check
    - Self-review at minimum.
    - Risky or important work: independent review when available.
-   - The author should not be the only judge of high-risk work.
+   - High-risk work benefits from a second judge.
 
 5. Remaining risk
    - Name what was not tested, skipped edge cases, or where it could still break.
-   - Naming risk is not failure. Hiding it is.
+   - Naming risk makes the handoff stronger.
 
-## Anti-Patterns This Kills
+## Patterns This Encourages
 
-- "Done" with no command run.
-- Visual work signed off from a diff without rendering.
-- One hypothesis, first guess, symptom patched, source untouched.
-- Giving up early because a preferred model or tool was unavailable.
-- Dumping a full transcript instead of summarizing the pattern.
+- Completion grounded in an observed command, runtime check, or artifact.
+- Visual work checked in the rendered surface.
+- Debugging from cause, not just symptom.
+- Active exploration even when a preferred model or tool is unavailable.
+- Concise evidence instead of bulky raw output.
