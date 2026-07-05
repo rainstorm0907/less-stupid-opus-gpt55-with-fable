@@ -10,6 +10,7 @@ This skill is a thin pre-router that helps an agent flail less:
 
 - route once when a specific workflow clearly matches;
 - keep small direct tasks lightweight;
+- define what done looks like before substantial work starts;
 - require real evidence for multi-step implementation, debugging, rendered UI,
   and product-quality work.
 
@@ -23,12 +24,13 @@ It is deliberately small and practical.
 | --- | --- |
 | A specific skill or workflow clearly matches | Route once, then get out of the way |
 | The task is small and direct | Just do it; keep the report brief |
-| The task is multi-step, risky, visual, or executable | Finish with Exit Proof |
+| The task is multi-step, risky, visual, or executable | Define done, then finish with Exit Proof |
 | A preferred model/path is unavailable | Transfer the work loop first; discover limits through evidence |
 | The current loop stops improving | Escalate with evidence |
 
 Exit Proof means:
 
+- observable done condition;
 - changed files;
 - command, test, or runtime observation actually seen;
 - screenshot, render, video, or output sample when relevant;
@@ -69,7 +71,8 @@ You can invoke it explicitly:
 Use $less-stupid-opus-gpt55-with-fable for this ambiguous implementation task.
 ```
 
-Most of the time, it should act as a quiet front door:
+Most of the time, it should act as a quiet front door. The user does not need to
+mention Fable; the work shape is enough:
 
 - For tiny tasks, it should stay lightweight.
 - For weird bugs, it should reproduce or observe before fixing.

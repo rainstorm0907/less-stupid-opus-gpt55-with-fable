@@ -1,13 +1,14 @@
 ---
 name: less-stupid-opus-gpt55-with-fable
-description: Thin anti-slop pre-router for Claude, Codex, Opus, GPT 5.5, and similar coding agents. Use when a task is ambiguous, multi-step, debugging-heavy, rendered-UI/product-quality oriented, Fable-like but Fable is unavailable, or likely to suffer from agent flailing. Routes once to a specific workflow when one clearly matches, lets small tasks move directly, and uses evidence-based Exit Proof for substantial implementation, debugging, or visual/artifact work.
+description: Thin anti-slop pre-router for Claude, Codex, Opus, GPT 5.5, and similar coding agents. Use by work shape rather than only when Fable is mentioned, including ambiguous goals, multi-step implementation, weird debugging, rendered-UI/product-quality work, finish-this-properly requests, make-this-robust requests, artifact-producing tasks, Fable-like workflow fallback, or any task likely to suffer from agent flailing. Routes once to a specific workflow when one clearly matches, lets small tasks move directly, and uses observable done conditions plus evidence-based Exit Proof for substantial work.
 ---
 
 # Less Stupid Opus & GPT 5.5 with Fable
 
 Use this as a thin operator in front of the real work. Keep the agent sharp and
-evidence-driven: route fast, keep small tasks light, and bring evidence for big
-ones. Keep the skill lightweight and practical.
+evidence-driven: route fast, keep small tasks light, define what done looks like
+for substantial work, and bring evidence for big ones. Keep the skill lightweight
+and practical.
 
 ## First Rule
 
@@ -16,6 +17,7 @@ Match the response to the task size.
 - Give one-liners a one-line path.
 - Give refactors enough context, verification, and review to be trustworthy.
 - Add structure only when it raises accuracy, safety, or usability.
+- Trigger from the shape of the work, not from the user naming Fable.
 
 ## Routing
 
@@ -37,10 +39,12 @@ tiny edits, and pure discussion lightweight.
 
 For a sharper checklist, load `references/exit-proof.md`.
 
+Before substantial work starts, define the observable done condition in one line.
 Before claiming done, state or internally verify:
 
 ```md
 Exit Proof:
+- done condition:
 - changed files:
 - observation:
 - visual or artifact evidence, if relevant:
@@ -53,6 +57,7 @@ Rules:
 - `changed files` means actual paths touched.
 - `observation` means a command, test, runtime result, or reproduced behavior
   actually seen. Prefer "I ran/observed X" over "this should work."
+- Unverified claims stay labeled as assumptions until observation supports them.
 - `visual or artifact evidence` means screenshot, render, video, PDF/image/file
   output, or sample result when the task is visual or artifact-producing.
 - `check` means self-review at minimum; use an independent review for risky,

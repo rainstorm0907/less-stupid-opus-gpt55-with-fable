@@ -8,6 +8,10 @@ The point is simple: look at the work before calling it done.
 
 ## The Five Lines
 
+0. Done condition
+   - Define what observable result would make the work complete.
+   - Keep it to one line before substantial work starts.
+
 1. Changed files
    - List the real paths touched.
    - Clear paths make the scope reviewable.
@@ -16,6 +20,7 @@ The point is simple: look at the work before calling it done.
    - Include one command, test, runtime result, or reproduced behavior you
      actually saw.
    - Prefer "I ran/observed X" over "this should work."
+   - Label unverified claims as assumptions until observation supports them.
 
 3. Visual or artifact evidence
    - Visual change: screenshot, render, or video.
